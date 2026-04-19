@@ -1,0 +1,73 @@
+/**
+ * ONQL — Docusaurus theme overrides.
+ * Dark-first design tuned for a developer audience.
+ */
+
+:root {
+  --ifm-color-primary: #7c5cff;
+  --ifm-color-primary-dark: #6a47ff;
+  --ifm-color-primary-darker: #5a37ee;
+  --ifm-color-primary-darkest: #4a25dd;
+  --ifm-color-primary-light: #8f72ff;
+  --ifm-color-primary-lighter: #a087ff;
+  --ifm-color-primary-lightest: #b09cff;
+
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --ifm-code-font-size: 90%;
+  --docusaurus-highlighted-code-line-bg: rgba(124, 92, 255, 0.12);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #a087ff;
+  --ifm-color-primary-dark: #8f72ff;
+  --ifm-color-primary-darker: #7c5cff;
+  --ifm-color-primary-darkest: #6a47ff;
+  --ifm-color-primary-light: #b09cff;
+  --ifm-color-primary-lighter: #c0b1ff;
+  --ifm-color-primary-lightest: #d0c6ff;
+
+  --ifm-background-color: #0b0b10;
+  --ifm-background-surface-color: #11121a;
+  --ifm-color-content: #e7e9f3;
+  --ifm-color-content-secondary: #9aa0b8;
+
+  --ifm-navbar-background-color: rgba(11, 11, 16, 0.85);
+  --ifm-footer-background-color: #0b0b10;
+
+  --docusaurus-highlighted-code-line-bg: rgba(124, 92, 255, 0.18);
+}
+
+/* Inline code chip */
+code {
+  background: rgba(124, 92, 255, 0.10);
+  border: 1px solid rgba(124, 92, 255, 0.20);
+  color: #5eead4;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+[data-theme='dark'] code {
+  background: rgba(124, 92, 255, 0.12);
+  color: #5eead4;
+}
+
+/* Code blocks — soften background a touch */
+.theme-code-block {
+  border-radius: 12px !important;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* Tables */
+table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Hero / homepage tweaks */
+.hero {
+  background: radial-gradient(800px 500px at 80% -10%, rgba(124, 92, 255, 0.18), transparent 60%),
+              radial-gradient(700px 450px at 0% 30%, rgba(94, 234, 212, 0.10), transparent 60%);
+}

@@ -1,0 +1,42 @@
+# Template: copy this into each ONQL/onqlclient-* repo as
+#   .github/workflows/notify-docs.yml
+#
+# It fires a repository_dispatch event at ONQL/docs every time README.md
+# changes on main, which triggers an immediate docs rebuild (see
+# deploy.yml in the docs repo).
+#
+# One-time setup:
+#   1. Create a fine-grained PAT with "Contents: read" + "Metadata: read"
+#      on ONQL/docs, or a classic PAT with `repo` scope.
+#      (A GitHub App works too and is preferable long-term.)
+#   2. Add it as secret DOCS_DISPATCH_TOKEN in *each* onqlclient-* repo.
+#      Quickest way, with gh CLI:
+#        for r in go node python php java csharp c cpp ruby rust; do
+#          gh secret set DOCS_DISPATCH_TOKEN -R ONQL/onqlclient-$r -b"<PAT>"
+#        done
+#   3. Drop this file into the repo at .github/workflows/notify-docs.yml
+#      and push to main.
+
+name: Notify docs site
+
+on:
+  push:
+    branches: [main]
+    paths: ['README.md']
+  workflow_dispatch:   # manual "notify" button for ad-hoc rebuilds
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.DOCS_DISPATCH_TOKEN }}
+          repository: ONQL/docs
+          event-type: driver-readme-updated
+          client-payload: |
+            {
+              "repo": "${{ github.repository }}",
+              "sha": "${{ github.sha }}",
+              "ref": "${{ github.ref }}"
+            }
