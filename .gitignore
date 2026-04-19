@@ -9,6 +9,11 @@ build/
 # Generated at build time by scripts/fetch-drivers.mjs
 docs/drivers/
 .repos.json
+.server-releases.json
+.shell-releases.json
+
+# Generated at build time by scripts/fetch-downloads.mjs
+docs/getting-started/downloads.md
 
 # Misc
 .DS_Store

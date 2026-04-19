@@ -5,8 +5,9 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "fetch-drivers": "node scripts/fetch-drivers.mjs",
-    "prestart": "node scripts/fetch-drivers.mjs",
-    "prebuild": "node scripts/fetch-drivers.mjs",
+    "fetch-downloads": "node scripts/fetch-downloads.mjs",
+    "prestart": "node scripts/fetch-drivers.mjs && node scripts/fetch-downloads.mjs",
+    "prebuild": "node scripts/fetch-drivers.mjs && node scripts/fetch-downloads.mjs",
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",

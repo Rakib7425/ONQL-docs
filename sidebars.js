@@ -22,6 +22,7 @@ const sidebars = {
       link: { type: 'generated-index', slug: '/getting-started' },
       items: [
         'getting-started/installation',
+        'getting-started/downloads',
         'getting-started/schema',
         'getting-started/first-query',
         'getting-started/configuration',
