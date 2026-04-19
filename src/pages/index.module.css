@@ -1,0 +1,238 @@
+.hero {
+  padding: 6rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 996px) {
+  .heroInner {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    padding: 4rem 0 3rem;
+  }
+}
+
+.eyebrow {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: var(--ifm-color-primary-lighter);
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+  opacity: 0.9;
+}
+
+.heroTitle {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.25rem;
+  font-weight: 700;
+}
+
+.accent {
+  background: linear-gradient(90deg, var(--ifm-color-primary-light), #5eead4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.heroTagline {
+  font-size: 1.15rem;
+  color: var(--ifm-color-content-secondary);
+  margin: 0 0 2rem;
+  max-width: 46ch;
+  line-height: 1.55;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.ctaPrimary {
+  background: var(--ifm-color-primary);
+  border: none;
+}
+
+.ctaSecondary {
+  background: transparent;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.ctaGhost {
+  padding: 0 0.5rem;
+  font-weight: 500;
+  color: var(--ifm-color-content-secondary);
+  text-decoration: none;
+}
+
+.ctaGhost:hover {
+  color: var(--ifm-color-primary-lighter);
+}
+
+.heroCode {
+  min-width: 0;
+}
+
+.codeBlock {
+  font-size: 0.92rem;
+}
+
+.codeCaption {
+  font-size: 0.85rem;
+  color: var(--ifm-color-content-secondary);
+  margin: 0.75rem 0 0;
+  font-style: italic;
+}
+
+/* --- Features --- */
+
+.features {
+  padding: 4rem 0;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.featureCard {
+  padding: 1.5rem;
+  border-radius: 14px;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.featureCard:hover {
+  border-color: var(--ifm-color-primary-lighter);
+  transform: translateY(-2px);
+}
+
+.featureCard h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.featureCard p {
+  margin: 0;
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* --- Data flow --- */
+
+.flow {
+  padding: 4rem 0;
+}
+
+.sectionTitle {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: -0.01em;
+  margin: 0 0 2rem;
+  text-align: center;
+}
+
+.flowGrid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .flowGrid {
+    grid-template-columns: 1fr;
+  }
+  .flowArrow {
+    transform: rotate(90deg);
+  }
+}
+
+.flowLabel {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--ifm-color-content-secondary);
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+}
+
+.flowArrow {
+  font-size: 2rem;
+  color: var(--ifm-color-primary-lighter);
+  text-align: center;
+}
+
+/* --- Next steps --- */
+
+.next {
+  padding: 4rem 0 6rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.nextGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.nextCard {
+  padding: 1.5rem;
+  border-radius: 14px;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+  display: block;
+}
+
+.nextCard:hover {
+  border-color: var(--ifm-color-primary-lighter);
+  text-decoration: none;
+  color: inherit;
+  transform: translateY(-2px);
+}
+
+.nextCard h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nextCard p {
+  margin: 0;
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.nextArrow {
+  color: var(--ifm-color-primary-lighter);
+  transition: transform 0.15s ease;
+}
+
+.nextCard:hover .nextArrow {
+  transform: translateX(3px);
+}

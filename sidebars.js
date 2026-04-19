@@ -120,6 +120,16 @@ const sidebars = {
         'language/row-access',
         {
           type: 'category',
+          label: 'Mutations',
+          link: { type: 'generated-index', slug: '/language/mutations' },
+          items: [
+            'language/mutations/insert',
+            'language/mutations/update',
+            'language/mutations/delete',
+          ],
+        },
+        {
+          type: 'category',
           label: 'Aggregates',
           link: { type: 'generated-index', slug: '/language/aggregates' },
           items: [
@@ -166,6 +176,7 @@ const sidebars = {
       link: { type: 'generated-index', slug: '/reference' },
       items: [
         'reference/cheatsheet',
+        'reference/shell',
         'reference/operators',
         'reference/aggregates',
         'reference/protocol-schema',
