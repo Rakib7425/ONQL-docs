@@ -16,7 +16,7 @@ const ORG = 'ONQL';
 const SERVER_REPO = 'server';
 const SHELL_REPO = 'onql-shell-client';
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || process.env.GT_TOKEN;
 const ghHeaders = {
   Accept: 'application/vnd.github+json',
   'User-Agent': 'onql-docs-fetch-downloads',

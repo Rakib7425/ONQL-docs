@@ -32,7 +32,7 @@ const LABELS = {
 // Order drivers appear in the sidebar. Anything not listed sorts alphabetically after.
 const ORDER = ['python', 'node', 'go', 'java', 'csharp', 'php', 'ruby', 'rust', 'c', 'cpp'];
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || process.env.GT_TOKEN;
 
 const ghHeaders = {
   Accept: 'application/vnd.github+json',
