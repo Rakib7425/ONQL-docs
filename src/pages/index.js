@@ -57,7 +57,7 @@ function Hero() {
               <Link className={clsx('button button--primary button--lg', styles.ctaPrimary)} to="/getting-started/installation">
                 Get started
               </Link>
-              <Link className={clsx('button button--secondary button--lg', styles.ctaSecondary)} to="/tour/basics">
+              <Link className={clsx('button button--secondary button--lg', styles.heroSecondaryCta)} to="/tour/basics">
                 Take the tour
               </Link>
               <Link className={styles.ctaGhost} to="/drivers">
